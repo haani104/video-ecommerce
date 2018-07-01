@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('./sampleVidData.json', { crossdomain: true })
+    axios.get('./sampleVidData.json')
       .then(data => {
         const imageData = data.data
         this.setState({
