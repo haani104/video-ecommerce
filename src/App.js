@@ -94,6 +94,9 @@ class App extends Component {
         <header className="App-header">
           <div className="navbar-inner">
             <span className="site-logo"></span>
+            <span className="tv-logo">
+              <img src={require('./assets/television-icon.png')} width='50px' height= '50px'/>
+            </span>
           </div>
         </header>
         <div id="video-container">

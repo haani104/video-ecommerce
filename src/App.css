@@ -27,6 +27,14 @@
   display: block;
   padding-top: 30px;
   padding-left: 20px;
+  float: left;
+}
+
+.tv-logo {
+  height: 30px;
+  display: block;
+  float: left;
+  padding-top: 5px;
 }
 
 #video-container{
