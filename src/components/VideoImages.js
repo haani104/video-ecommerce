@@ -1,7 +1,6 @@
 import React from 'react'
 
 const VideoImages = ({ images, onImageClick, products }) => {
-  console.log(images)
   return (
     <div>
       <div className="video-images-container">

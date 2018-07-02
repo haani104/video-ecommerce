@@ -3,6 +3,7 @@ import YTPlayer from 'react-youtube'
 import axios from 'axios';
 import VideoImages from './components/VideoImages'
 import './App.css';
+const SERVER_URL = 'http://localhost:5000/api'
 
 class App extends Component {
   constructor(props) {
@@ -27,8 +28,6 @@ class App extends Component {
   isVidImgExists = (imagesrc) => {
     let exists = false;
     this.state.normImgList.some(item => {
-      console.log(imagesrc)
-      console.log(item.src)
       if (item.src === imagesrc) {
         exists = true
       }
@@ -69,7 +68,8 @@ class App extends Component {
   }
 
   handleVidImgClick = (pids) => {
-    const url = "https://ace.tokopedia.com/search/v1/product/by_id?id=" + pids.join(',') + '&device=web&rows=5&source=im'
+    const pidsString = pids.join(',')
+    const url = `${SERVER_URL}?id=${pidsString}`
     axios.get(url)
       .then((response) => {
         this.setState({ vidImageProducts: response.data.data.products });
