@@ -89,6 +89,9 @@ class App extends Component {
       }
     }
 
+    const amount = 100000;
+    const amountInIDR = amount.toLocaleString('id')
+
     return (
       <div className="App">
         <header className="App-header">
@@ -106,6 +109,9 @@ class App extends Component {
             onPlay={this.handlePlay}
             onPause={this.handlePause}
           />
+        </div>
+        <div>
+          <span>Rp {amountInIDR}</span>
         </div>
         <VideoImages
           images={this.state.normImgList}
